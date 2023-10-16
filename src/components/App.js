@@ -85,7 +85,7 @@ function App() {
 	const maxPoints = questions.reduce((acc, curr) => acc + curr.points, 0);
 
 	useEffect(function () {
-		fetch("http://localhost:5000/questions")
+		fetch("https://react-quiz-nine-mocha.vercel.app:5000/questions")
 			.then((res) => res.json())
 			.then((data) => dispatch({ type: "FETCHED_QUESTIONS", payload: data }))
 			.catch((err) => dispatch({ type: "Error fetching questions" }));
